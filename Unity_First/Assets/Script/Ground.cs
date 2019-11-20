@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    [Header("這個是速度哦")] [Range(0.1f, 3)]
+    [Header("移動速度")] [Range(0.1f, 10)]
     public float speed = 1.5f;
 
     public Transform ground;
@@ -14,9 +14,9 @@ public class Ground : MonoBehaviour
     /// 地板移動速度
     /// </summary>
     /// <param name="movespeed"></param>
-    private void Move(float movespeed)
+    private void Move()
     {
-      
+        ground.Translate(-speed * Time.deltaTime, 0, 0);
     }
 
 
@@ -24,7 +24,7 @@ public class Ground : MonoBehaviour
 
     private void Update()
     {
-        ground.Translate(-speed, 0, 0);
+        Move();
     }
 
     
