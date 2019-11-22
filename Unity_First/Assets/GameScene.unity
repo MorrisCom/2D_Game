@@ -1312,6 +1312,8 @@ GameObject:
   - component: {fileID: 1265082715}
   - component: {fileID: 1265082717}
   - component: {fileID: 1265082718}
+  - component: {fileID: 1265082719}
+  - component: {fileID: 1265082720}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
@@ -1374,6 +1376,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gugu: {fileID: 1016669975}
+--- !u!114 &1265082719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265082714}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ef96e301ce7a144ad765b1ec3df5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 1
+  score: 0
+  combo: 2
+--- !u!114 &1265082720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265082714}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff66a9d60160774c94a93e3099f8dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 55
+  b: 6
+  c: 3
+  d: 9
 --- !u!1 &1279250784
 GameObject:
   m_ObjectHideFlags: 0
