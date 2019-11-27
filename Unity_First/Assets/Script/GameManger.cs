@@ -41,7 +41,7 @@ public class GameManger : MonoBehaviour
         //前面字體深綠色代表可省略
         //實例化、生成(物件)
         //Random.Range(1f, 5f);
-        Vector3 R = new Vector3(7, Random.Range(-3f, 3.3f), 0);
+        Vector3 R = new Vector3(7, Random.Range(-3f, 2.7f), 0);
         Instantiate(pipe,R,Quaternion.identity);
     }
     private void Start()
@@ -49,7 +49,7 @@ public class GameManger : MonoBehaviour
         //SpawPipe();
         //延遲調用("方法名稱",延遲時間)
         //重複延遲調用("方法名稱",延遲時間,重複頻率)
-        InvokeRepeating("SpawnPipe", 0, 2.5f);
+        InvokeRepeating("SpawnPipe", 0, 2.0f);
       
     }
 }
