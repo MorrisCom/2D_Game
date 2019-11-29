@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    [Header("移動速度")] [Range(0.1f, 10)]
-    public float speed = 1.5f;
+    //[Header("移動速度")] [Range(0.1f, 10)]
+    public static float speed = 3.1f;
 
     public Transform ground;
 

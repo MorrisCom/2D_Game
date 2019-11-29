@@ -9,13 +9,13 @@ public class GameManger : MonoBehaviour
     public int score;
     [Header("最佳分數")][Range(0,9999)]
     public int bestscore;
-  
+     [Header("生成水管")]
     public GameObject pipe;
-
+    public GameObject Gofinal;
     /// <summary>
     /// 加分
     /// </summary>
-    private void addscore()
+    public void addscore()
     {
         
     }
@@ -29,9 +29,10 @@ public class GameManger : MonoBehaviour
     /// <summary>
     /// 遊戲結束
     /// </summary>
-    private void GG()
+    public void GG()
     {
-        
+        Gofinal.SetActive(true);
+        CancelInvoke("SpawnPipe");
     }
     /// <summary>
     /// 生成水管的方法
@@ -49,7 +50,7 @@ public class GameManger : MonoBehaviour
         //SpawPipe();
         //延遲調用("方法名稱",延遲時間)
         //重複延遲調用("方法名稱",延遲時間,重複頻率)
-        InvokeRepeating("SpawnPipe", 0, 2.0f);
+        InvokeRepeating("SpawnPipe", 0, 3.0f);
       
     }
 }
