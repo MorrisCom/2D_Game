@@ -9,7 +9,10 @@ public class Ground : MonoBehaviour
 
     public Transform ground;
 
-
+    private void Start()
+    {
+        speed = 3.1f;
+    }
     /// <summary>
     /// 地板移動速度
     /// </summary>

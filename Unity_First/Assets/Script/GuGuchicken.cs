@@ -17,13 +17,17 @@ public class GuGuchicken : MonoBehaviour
     public GameManger Gm;
 
     public Rigidbody2D Rb2d;
-
+    //音效區
     [Header("音效區域")]
     public AudioSource aud;
     public AudioClip Aud_jump;
     public AudioClip Aud_death;
     public AudioClip Aud_pass;
 
+    private void Start()
+    {
+        Screen.SetResolution(450, 800, false);
+    }
     private void Update()
     {
         if (death) return;
@@ -53,6 +57,10 @@ public class GuGuchicken : MonoBehaviour
     {
         
     }
+    /// <summary>
+    /// 死掉時的碰撞
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // print(collision.gameObject.name);
@@ -68,12 +76,18 @@ public class GuGuchicken : MonoBehaviour
             Rb2d.SetRotation(180);
         }
     }
+    /// <summary>
+    /// 通過的方法
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == ("通過"))
+        if (collision.gameObject.name == ("通過")&&!death)
         {
-            print("發大財");
+            //print("發大財");
+            Gm.addscore();
             aud.PlayOneShot(Aud_pass, 1.5f);
+            
         }
     }
     /// <summary>
@@ -81,6 +95,7 @@ public class GuGuchicken : MonoBehaviour
     /// </summary>
     private void flamebird()
     {
+        if (death) return;
         aud.PlayOneShot(Aud_death, 1.5f);
         death = true;
         Gm.GG();
@@ -92,5 +107,6 @@ public class GuGuchicken : MonoBehaviour
     /// </summary>
     private void Gujump()
     {
+
     }
 }
